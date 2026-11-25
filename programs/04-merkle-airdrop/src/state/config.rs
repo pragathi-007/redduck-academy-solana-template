@@ -3,5 +3,9 @@ use anchor_lang::prelude::*;
 #[account]
 #[derive(InitSpace)]
 pub struct Config {
-    // TODO: add the fields this account needs.
+    pub mint: Pubkey,
+    pub merkle_root: [u8; 32],
+    pub signer: Pubkey,
+    pub bump: u8,
+    pub vault_bump: u8,
 }
